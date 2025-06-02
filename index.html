@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Espaço D’elas</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #fff5f8;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(to right, #f78fb3, #f8a5c2);
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    nav {
+      background: #ffe0ec;
+      padding: 1rem;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    nav a {
+      color: #d6336c;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #a61c4d;
+    }
+
+    .container {
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    section {
+      margin-bottom: 3rem;
+    }
+
+    .descricao p {
+      margin: 0.5rem 0;
+      font-style: italic;
+      color: #a61c4d;
+    }
+
+    .servicos ul {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .servicos li {
+      background: #fff;
+      padding: 1rem;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .galeria {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .galeria img {
+      width: 100%;
+      border-radius: 10px;
+      height: 150px;
+      object-fit: cover;
+      transition: transform 0.3s;
+    }
+
+    .galeria img:hover {
+      transform: scale(1.05);
+    }
+
+    .contato {
+      text-align: center;
+    }
+
+    .endereco {
+      margin-top: 1rem;
+      font-size: 1.1rem;
+      background: #fff0f5;
+      padding: 1rem;
+      border-radius: 10px;
+      border: 1px solid #f3c6d2;
+      display: inline-block;
+    }
+
+    footer {
+      background: #d6336c;
+      color: white;
+      text-align: center;
+      padding: 1.5rem;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Espaço D’elas</h1>
+    <p>Salão de Beleza Espaço D’elas</p>
+    <div class="descricao">
+      <p>💕 Você é seu melhor investimento</p>
+      <p>💕 Um salão completo para realçar a mulher linda que você é</p>
+      <p>💕 Eleve sua autoestima</p>
+    </div>
+  </header>
+
+  <nav>
+    <a href="#sobre">Sobre</a>
+    <a href="#servicos">Serviços</a>
+    <a href="#contato">Contato</a>
+  </nav>
+
+  <div class="container">
+    <section id="sobre">
+      <h2>Sobre Nós</h2>
+      <p>O Espaço D’elas é um salão de beleza criado por mulheres incríveis que acreditam no poder da autoestima e no cuidado com o bem-estar. Nossa missão é transformar seu dia com carinho, técnica e muito estilo!</p>
+    </section>
+
+    <section id="servicos" class="servicos">
+      <h2>Serviços</h2>
+      <ul>
+        <li>👁️‍🗨️ Amarílis - Lash Designer</li>
+        <li>💆‍♀️ Paloma - Massoterapeuta</li>
+        <li>💇‍♀️ Letícia - Cabeleireira</li>
+        <li>💅 Aline - Manicure</li>
+      </ul>
+    </section>
+
+    <section id="contato" class="contato">
+      <h2>Contato</h2>
+      <p>Agendamentos são feitos diretamente no salão. Esperamos por você!</p>
+      <div class="endereco">
+        📍 <strong>Endereço:</strong>Rua Alameda Flor do Amor 13-07, Bauru 17021270
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Espaço D’elas. Todos os direitos reservados.</p>
+    <p>
+  Siga a gente no Instagram:
+  <a href="https://instagram.com/espacodelasbauru" target="_blank" style="color: #ffe0ec; text-decoration: underline;">
+    @espacodelasbauru
+  </a>
+</p>
+  </footer>
+
+  <script>
+    // Scroll suave no clique do menu
+    document.querySelectorAll('nav a').forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        const id = link.getAttribute('href').substring(1);
+        const section = document.getElementById(id);
+        section.scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+  </script>
+
+</body>
+</html>
